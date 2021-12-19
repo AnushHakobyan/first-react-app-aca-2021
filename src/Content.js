@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
 
-const Content = ({ titleComponent: Component }) => {
+const Content = ({ user, renderTitle }) => {
   return (
     <section>
-      <Component />
+      {renderTitle(user)}
     </section>
   );
 };
 
 Content.propTypes = {
   titleComponent: PropTypes.elementType,
+  renderTitle: PropTypes.func,
 };
 
 export default Content;

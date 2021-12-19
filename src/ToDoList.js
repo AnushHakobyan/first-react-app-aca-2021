@@ -1,7 +1,7 @@
-const ToDoList = ({ toDoList }) => {
+const ToDoList = ({ data }) => {
   return (
     <ul>
-      {toDoList.map((toDoItem) => (
+      {data && data.map((toDoItem) => (
         <li key={toDoItem}>{toDoItem}</li>
         ))}
     </ul>
